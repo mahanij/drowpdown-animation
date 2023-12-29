@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* animation part */
+@keyframes gradient {
+  0% {
+  }
+  10% {
+    position: relative;
+    top: 40px;
+    right: 50px;
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb82 100%);
+    opacity: 0.4;
+  }
+}
+
+@keyframes gradient-2 {
+  0% {
+  }
+  10% {
+    position: relative;
+    top: 40px;
+    right: 50px;
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+  }
+  80%{
+    border-radius: 50%;
+    width: 120vh;
+    height: 90vh;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #85ffbd;
+    background-image: linear-gradient(45deg, #ff8585 0%, #e882ff 100%);
+    opacity: 0.4;
+  }
+}
+
+.animation {
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-name: gradient;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.animation-2 {
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-name: gradient-2;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* dropdown part */
+.dropdown {
+  background-color: #de0090;
+  background-image: linear-gradient(90deg, #de0090 0%, #fc00ff 100%);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blanchedalmond;
+  border-radius: 20px;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column-reverse;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.dropdown-item {
+  display: none;
+  min-width: 200px;
+  min-height: 50px;
+  border-radius: 10px;
+  background-color: rgb(255, 0, 123);
+  position: relative;
+  top: 30px;
+  opacity: 0.5;
+}
+
+.dropdown:hover .dropdown-item {
+  display: flex;
+}
+
+.dropdown:hover {
+  background-color: #d9afd9;
+  transition-duration: 5s;
+  width: 0px;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  color: #fc00ff;
+}
